@@ -1,16 +1,13 @@
+import java.util.HashMap;
+
 class Solution {
     public boolean solution(String[] phone_book) {
-        boolean answer = true;
-        
-        for(int i =0; i<phone_book.length; i++){
-            for(int j =0; j<phone_book.length; j++){
-                if(i == j) continue;
-                if(phone_book[j].indexOf(phone_book[i])==0){//접두어라면
-                    return false;   
-                }
-            }
-        }
-        
-        return answer;
+            HashMap<String, Integer> hashMap = new HashMap<>();
+
+            for (String number : phone_book) hashMap.put(number, 0);
+            for (String key : hashMap.keySet())
+                for (int j = 1; j <= key.length() - 1; j++)
+                    if (hashMap.containsKey(key.substring(0, j))) return false;
+            return true;
     }
 }
