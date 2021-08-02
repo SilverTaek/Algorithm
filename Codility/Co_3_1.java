@@ -3,16 +3,16 @@
 
 // you can write to stdout for debugging purposes, e.g.
 // System.out.println("this is a debug message");
-import java.util.Arrays;
+
 class Solution {
     public int solution(int[] A) {
-        Arrays.sort(A);
-        int leng = A.length;
-        for(int i=0; i<leng; i++){
-            if(i+1 != A[i]){
-                return i+1;
-            }
+        long sum = sumStartOneTo(A.length + 1);
+        for(int i=0; i<A.length; i++){
+            sum -= A[i];
         }
-        return 0;
+        return (int) sum;
+    }
+    private long sumStartOneTo(int n) {
+        return ((long)n * (n + 1)) / 2;
     }
 }
