@@ -1,18 +1,13 @@
-// you can also use imports, for example:
-// import java.util.*;
-
-// you can write to stdout for debugging purposes, e.g.
-// System.out.println("this is a debug message");
+// D만큼 이동할 수 있는데 X에서 Y를 갈 때 최소 Y와 같거나 커야할 때, 최솟값을 구해라
 
 class Solution {
-    public int solution(int[] A) {
-        long sum = sumStartOneTo(A.length + 1);
-        for(int i=0; i<A.length; i++){
-            sum -= A[i];
+    public int solution(int X, int Y, int D) {
+        if(X>=Y) return 0;
+
+        if(((Y-X) % D) == 0){
+            return (Y-X)/D;
+        } else{
+            return (Y-X)/D + 1;
         }
-        return (int) sum;
-    }
-    private long sumStartOneTo(int n) {
-        return ((long)n * (n + 1)) / 2;
     }
 }

@@ -1,7 +1,6 @@
+// A의 배열 중 X까지 갔을 때 앞에 있는 값들을 모두 거쳐야할 때 값을 구해라
+// 거치지않는다면 -1을 출력
 import java.util.*;
-
-// you can write to stdout for debugging purposes, e.g.
-// System.out.println("this is a debug message");
 
 class Solution {
     public int solution(int X, int[] A) {

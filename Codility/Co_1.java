@@ -1,9 +1,5 @@
-// you can also use imports, for example:
-// import java.util.*;
-
-// you can write to stdout for debugging purposes, e.g.
-// System.out.println("this is a debug message");
-
+// 10진수로 입력 된 N을 2진수로 바꿔준다.
+// 10100
 class Solution {
 	static int zero, one, temp, ans = 0;
     public int solution(int N) {
@@ -12,7 +8,7 @@ class Solution {
 
         int leng = binary.length();
 
-        for(int i=0; i < leng; i++){
+        for(int i=0; i < leng; i++) {
             if(binary.charAt(i) == '0') {
                 zero++;
             }
@@ -25,7 +21,7 @@ class Solution {
             }
         }
 
-        if(one < 2){
+        if(one < 2) {
             return ans = 0;
         }else {
             ans = temp;

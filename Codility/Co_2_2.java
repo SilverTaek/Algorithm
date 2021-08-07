@@ -1,3 +1,6 @@
+// 페어하지 않는 값을 찾아라
+// XOR로 찾음
+
 class Solution {
     public int solution(int[] A) {
         int result = 0;

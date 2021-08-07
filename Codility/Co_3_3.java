@@ -1,8 +1,4 @@
-// you can also use imports, for example:
-// import java.util.*;
-
-// you can write to stdout for debugging purposes, e.g.
-// System.out.println("this is a debug message");
+// 각 구간별로 나눠서 절대값 뺀 값이 제일 작은 값을 출력하라
 
 class Solution {
     public int solution(int[] A) {
@@ -12,7 +8,7 @@ class Solution {
  
     for (int i = 0; i < A.length; i++) {
         sum_toLast += A[i];
-    }
+    } // A의 값을 다더한다.
  
     int minDiff = Integer.MAX_VALUE;
  
