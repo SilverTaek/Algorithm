@@ -21,14 +21,12 @@ public class Main_20_다섯글자순차역순 {
 
 	private static void bbq(int level) {
 		
-		System.out.print(arr[level]);
-		
-		if(level == 4) {
+		if(level == 5) {
 			System.out.println();
-			System.out.print(arr[level]);
 			return;
 		}
 		
+		System.out.print(arr[level]);
 		bbq(level + 1);
 		
 		System.out.print(arr[level]);
